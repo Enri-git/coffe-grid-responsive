@@ -130,10 +130,10 @@ section#intro h3{
   margin-top: -23px;
   justify-self: center;
 }
-section#about{
-    /*! grid-template-columns: repeat(2, 1fr); */
-    /*! grid-row-start:2; */
-}
+/*section#about{
+    ! grid-template-columns: repeat(2, 1fr); 
+    ! grid-row-start:2;
+} */
 #about figure{
   grid-column-start: 1 span;
   margin: 0;
