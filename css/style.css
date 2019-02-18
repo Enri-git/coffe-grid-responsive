@@ -59,10 +59,10 @@ var{
     place-self: baseline center;
 }
 nav{
-  display: none;
-  z-index: 100;
+  /*! display: none; */
+  /*! z-index: 100; */
 }
-.menu:hover nav{ 
+.menu:hover .navi{ 
     display: block;
     background-color: rgba(10,10,10,0.7);
     width: 100%;
@@ -80,28 +80,23 @@ nav{
 }
 
 .navi{
-    /*! display: block; */
+    display: none;
     color: white;
     transition: all 0.2s ease;
     line-height: 2;
     text-align: center;
     height: 90vh;
-    /*! z-index: 1; */
+    z-index: 1;
 }
-.navi ul{
+.navi a{
   margin-top:40px;   
   display: block;
-}
-
-.navi ul li a{
-  display: block;
   color: white;
-  font-size:2.5em; 
-}  
+  font-size:2.5em;
+}
+  
 
 section#intro {
-    /*! grid-row-start: 1; */
-    /*! grid-template-columns: 1fr 1fr; */
     width: 35%;
     margin: 0;
     align-content: center;
@@ -126,7 +121,6 @@ transform: rotate(-180deg);
 section#intro h3{
   color: cyan;
   font-size: 2em;
-  /*! grid-row-start: 2; */
   margin-top: -23px;
   justify-self: center;
 }
@@ -201,7 +195,6 @@ section#intro h3{
   }
 #contact h2 {
     padding-left: 35px;
-    /*! grid-row: 1 / -1; */
 }
 form{
     display: grid;
