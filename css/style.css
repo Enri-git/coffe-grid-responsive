@@ -1,0 +1,255 @@
+body{
+  margin: 0;
+  font-size: 18px;
+  grid-template-columns: 50% 50%; 
+  font-family: Roboto;
+  background-color: rgba(36, 37, 39, 0.88);
+  background: url("../img/coffee-2589761_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+section{
+  height:100vh;
+}
+header,
+#intro,
+#about,
+#blog,
+#contact{
+  display: grid;
+  grid-column: 1 / -1;
+}
+h2{
+  height: 5vh;
+}
+header{
+  grid-template-columns: repeat(2, 2fr);
+  grid-row-start: 1;
+  place-items: center;
+  height:15vh;
+  width: 100%;
+  background-color: rgba(15, 14, 14, 0.2);
+}
+.logo{
+  justify-self: start;
+  font-size: 2em;
+  color: white;
+  font-weight: bolder;
+}
+var{
+  font-weight: 300;
+}
+.menu{
+    background-color: aqua;
+    width: 60px;
+    height: 60px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: grid;
+    align-content: space-evenly;
+    place-self: baseline center;
+}
+nav{
+  display: none;
+  z-index: 100;
+}
+.menu:hover nav{ 
+    display: block;
+    background-color: rgba(10,10,10,0.7);
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.bar{
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.navi{
+    /*! display: block; */
+    color: white;
+    transition: all 0.2s ease;
+    line-height: 2;
+    text-align: center;
+    height: 90vh;
+    /*! z-index: 1; */
+}
+.navi ul{
+  margin-top:40px;   
+  display: block;
+}
+
+.navi ul li a{
+  display: block;
+  color: white;
+  font-size:2.5em; 
+}  
+
+section#intro {
+    /*! grid-row-start: 1; */
+    /*! grid-template-columns: 1fr 1fr; */
+    width: 35%;
+    margin: 0;
+    align-content: center;
+    height: 85vh;
+  }
+h2::before{
+  content: "";
+  width: 20px;
+border: 2px solid #2FB4CB;
+transform: rotate(-180deg);
+  display: inline-block;
+  height: 0px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+#intro h1{
+  color: cyan;
+  font-size: 3em;
+  justify-self: end;
+}
+
+section#intro h3{
+  color: cyan;
+  font-size: 2em;
+  /*! grid-row-start: 2; */
+  margin-top: -23px;
+  justify-self: center;
+}
+section#about{
+    /*! grid-template-columns: repeat(2, 1fr); */
+    /*! grid-row-start:2; */
+}
+#about figure{
+  grid-column-start: 1 span;
+  margin: 0;
+}
+#about figure img{
+    height: 100vh;
+    object-fit: cover;
+    width: 45vw;
+}
+#about aside{
+    grid-column-start: 2;
+    width: 90%;
+    align-self: center;
+    height: 55vh;
+    display: grid;
+    justify-self: center;
+    background-color: rgba(209, 220, 231, 0.3);
+    padding: 15px;
+    box-sizing: border-box;
+}
+#about span,#about h2{
+    position:absolute;
+    color: white;
+    padding-left: 30px;
+}
+.text p{
+  color: #333;
+  align-self: center;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.text button{
+  background-color: #1a8a8a;
+  color: white;
+  width: 10vw;
+  height: 6vh;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  justify-self: center;
+}
+
+#blog {
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 10px;
+    grid-row: 4 /-1;
+    place-content: center;
+    justify-items: center;
+  }
+#blog figure img {
+    width: 40vw;
+    height: 38vh;
+    object-fit: cover;
+}
+#blog h2 {
+    grid-column: 1 / -1;
+    padding-left: 35px;
+    justify-self: start;
+    grid-row: 1 / -1;
+}
+#contact {
+  display: grid;
+  grid-template-columns: 90%;
+  grid-template-rows: 10vh 90vh;
+  justify-content: center;
+  }
+#contact h2 {
+    padding-left: 35px;
+    /*! grid-row: 1 / -1; */
+}
+form{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: 2/ -1;
+    grid-template-rows: 35vh 35vh 10vh;
+    align-items: first baseline;
+    justify-items: center;
+    padding-top: 10px;
+}
+  
+form input{
+  background-color: #1a8a8a;
+  color: white;
+  height: 8vh;
+  width: 70%;
+  font-size: 1em;
+ 
+}
+form textarea{
+  width: 70%;
+  background-color:#1a8a8a;
+  color: white;
+  font-size: 1em;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-end: 3;
+  grid-row-start: 1;
+}
+form input[type=text], form input [type=email]{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-end: 3;
+  grid-row: 2/2; 
+  
+}
+form input[type=submit]{
+  grid-column: 2;
+  grid-row-start: 3;
+}
+
+footer{
+  display: grid;
+  background: #004754;
+  color:white;
+  grid-column: 1 / -1;
+  place-items: center;
+  height: 30vh;
+  grid-column-gap: unset;
+}
+
