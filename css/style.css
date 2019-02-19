@@ -202,7 +202,7 @@ form{
     display: grid;
     grid-template-columns: 50% 50%;
     grid-row: 2/ -1;
-    grid-template-rows: 35vh 35vh 10vh;
+    grid-template-rows: 17vh 24vh 10vh;
     align-items: first baseline;
     justify-items: center;
     padding-top: 10px;
@@ -214,7 +214,9 @@ form input{
   height: 8vh;
   width: 70%;
   font-size: 1em;
- 
+}
+form input::placeholder,textarea::placeholder{
+  color:white;
 }
 form textarea{
   width: 70%;
@@ -223,17 +225,22 @@ form textarea{
   font-size: 1em;
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-end: 3;
   grid-row-start: 1;
-}
-form input[type=text], form input [type=email]{
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-end: 3;
-  grid-row: 2/2; 
+  grid-row-end: 2;
+  align-self: flex-start;
   
 }
+form input[type=text]{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+}
+form input[type=email]{
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
 form input[type=submit]{
+  width: 50%;
   grid-column: 2;
   grid-row-start: 3;
 }
@@ -248,3 +255,64 @@ footer{
   grid-column-gap: unset;
 }
 
+/* Responsive for mobile */
+
+@media screen and (max-width: 600px) {
+  body,
+  #blog,
+  #contact form{
+    grid-template-columns: 1fr;
+  }
+  body{
+    background-size: 100% 96%;
+    object-fit: cover;
+  }
+  section#intro {
+    width: auto;
+  }
+  #intro h1 {
+    justify-self: start;
+  }
+  #about figure img {
+    width: 100vw;
+  }
+  #about aside {
+    width: auto;
+    background-color: rgba(209, 220, 231, 0.8);
+    position: absolute;
+    margin: 35% auto;
+  }
+  .text p {
+    color: #333;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+  .text button {
+    width: auto;
+  }
+  #blog {
+    place-content: unset;
+  }
+  #blog figure {
+    margin: 0;
+  }
+  #blog figure img {
+    width: 82vw;
+    height: 20vh;
+  }
+  #contact {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 90vh;
+    justify-content: stretch;
+    margin: 0;
+  }
+  #contact form{
+    display: flex;
+    flex-direction: column;
+  }
+  form input,form textarea{
+  margin: 1% auto; 
+  }
+  
+}
